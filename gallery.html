@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: aliceblue;
+    }
+    header{
+        width: 100%;
+        background-color: #000;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        position: fixed;
+        z-index: 5;
+    }
+    .logo{
+        width: auto;
+        height: 60px;
+        position: absolute;
+        left: 80px;
+    }
+    .count{
+        text-decoration: none;
+        font-family: sans-serif;
+        color: rgb(205, 205, 205);
+        font-size: 20px;
+        letter-spacing: 2px;
+        padding: 0 10px;
+        position: relative;
+    }
+    .count:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    .count:after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    .count:hover::after{
+        width: 100%;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        position: absolute;
+        right: 120px;
+    }
+    img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 5px;
+        padding-top: 5px;
+    }
+    .img1{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .img2{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        position: relative;
+    }
+    .img2 h2{
+        position: absolute;
+        top: -1%;
+        left: 25%;
+    }
+    .img3{
+        grid-column: 4/6;
+        grid-row: 1/2;
+    }
+    .img4{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .img5{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        position: relative;
+    }
+    .img5 h2{
+        position: absolute;
+        bottom: -5%;
+        left: 25%;
+    }
+    .img6{
+        grid-column: 4/5;
+        grid-row: 2/3;
+        position: relative;
+    }
+    .img6 h2{
+        position: absolute;
+        bottom: -5%;
+        left: 30%;
+    }
+    .img7{
+        grid-column: 5/6;
+        grid-row: 2/3;
+        position: relative;
+    }
+    .img7 h2{
+        position: absolute;
+        top: 30%;
+        left: 25%;
+    }
+    .img8{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        position: relative;
+    }
+    .img8 h2{
+        position: absolute;
+        bottom: -5%;
+        left: 25%;
+    }
+    .img9{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .img10{
+        grid-column: 3/4;
+        grid-row: 3/5;
+        position: relative;
+    }
+    .img10 h2{
+        position: absolute;
+        bottom: -2%;
+        left: 27%;
+    }
+    .img11{
+        grid-column: 4/5;
+        grid-row: 3/4;
+    }
+    .img12{
+        grid-column: 5/6;
+        grid-row: 3/4;
+        position: relative;
+    }
+    .img12 h2{
+        position: absolute;
+        bottom: -14%;
+        left: 23% ;
+    }
+    .img13{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        position: relative;
+    }
+    .img13 h2{
+        position: absolute;
+        bottom: -14%;
+        left: 20%;
+    }
+    .img14{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .img15{
+        grid-column: 4/5;
+        grid-row: 4/5;
+    }
+    .img16{
+        grid-column: 5/6;
+        grid-row: 4/5;
+    }
+    @media screen and (max-width: 431px){
+    header{
+        width: 430px;
+        height: 50px;
+    }
+    .logo{
+        height: 25px;
+        left: 20px;
+    }
+    .count{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    nav{
+        right: 10px;
+        gap: 5px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./Images/jihc-logo-png-v1(white).png" alt="JIHC-Logo">
+        <nav>
+         <a class="count" href="index.html">Home</a>
+         <a class="count" href="about.html">About</a>
+         <a class="count" href="log-in.html">Log in</a>
+         <a class="count" href="./Gallery.html">Gallery</a>
+         <a class="count" href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="img1">
+            <img src="./Images/00b5e3c1-f4ca-4544-8c12-fa61dad468a1_176x176.jpg" alt="">
+        </div>
+        <div class="img2">
+            <img src="./Images/01b6dbcd-f08b-41c1-9380-fbbb467c9d4a_176x176.jpg" alt="">
+        </div>
+        <div class="img3">
+            <img src="./Images/0fe629f7-7236-4796-bc83-383ad9055690_176x176.jpg" alt="">
+        </div>
+        <div class="img4">
+            <img src="./Images/30258560102019038_8565_656x340.jpg" alt="">
+        </div>
+        <div class="img5">
+            <img src="./Images/30258560176123432_7d0e_656x340.jpg" alt="">
+        </div>
+        <div class="img6">
+            <img src="./Images/333ec42a-c91a-40f3-9482-372bb88345c9_176x176.jpg" alt="">
+        </div>
+        <div class="img7">
+            <img src="./Images/3c688c2b-d94f-4eda-8b6e-da5cb257ab4e_176x176.jpg" alt="">
+        </div>
+        <div class="img8">
+            <img src="./Images/3ebd92dc-d47f-4d2e-8839-fe77f432b55a_176x176.jpg" alt="">
+        </div>
+        <div class="img9">
+            <img src="./Images/4876db8b-52b3-48b7-8a2e-c8b30b33f6dc_176x176.jpg" alt="">
+        </div>
+        <div class="img10">
+            <img src="./Images/48ea4a4d-a875-4db9-b111-030885643c3d_176x176.jpg" alt="">
+        </div>
+        <div class="img11">
+            <img src="./Images/6d2f0c05-cc8f-4450-8b9f-523511867f75_176x176.jpg" alt="">
+        </div>
+        <div class="img12">
+            <img src="./Images/7b6753d6-4f8a-4f1e-8b41-12bf513f163a_176x176.jpg" alt="">
+        </div>
+        <div class="img13">
+            <img src="./Images/7b94b100-3aae-41e1-919e-cea717393e90_176x176.jpg" alt="">
+        </div>
+        <div class="img14">
+            <img src="./Images/7c42377c-a7cb-4d27-bcb2-c881538ed80a_176x176.jpg" alt="">
+        </div>
+        <div class="img15">
+            <img src="./Images/7e3b096f-3f97-4926-a01f-17da86832945_176x176.jpg" alt="">
+        </div>
+        <div class="img16">
+            <img src="./Images/8142a263-f319-4c47-aec9-9599d5b4759e_176x176.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

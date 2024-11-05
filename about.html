@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+    header{
+        width: 100%;
+        background-color: #000;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        position: fixed;
+        z-index: 5;
+        margin-top: -200px;
+    }
+    .logo{
+        width: auto;
+        height: 60px;
+        position: absolute;
+        left: 80px;
+    }
+    .count{
+        text-decoration: none;
+        font-family: sans-serif;
+        color: rgb(205, 205, 205);
+        font-size: 20px;
+        letter-spacing: 2px;
+        padding: 0 10px;
+        position: relative;
+    }
+    .count:hover{
+        color: #fff;
+    }
+    .count:after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    .count:hover::after{
+        width: 100%;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        position: absolute;
+        right: 120px;
+    }
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.tabs {
+  position: relative;
+  margin: 3rem 0;
+  background: blue;
+  height: 14.75rem;
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: blue;
+  border-right: 0.125rem solid blue;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  height: 12rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: aliceblue;
+  color: #2c3e50;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.35s;
+}
+body{
+    background-color: #bdc3c7;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.foot-logo{
+    width: auto;
+    height: 50px;
+    margin-top: 40px;
+}
+/* CSS стили для footer */
+.first {
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-container > div {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  }
+  
+  .footer h3, .footer h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer a {
+    color: rgba(128, 128, 128, 0.692);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .footer-social a {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    margin-left: -100px;
+  }
+  .logos1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+   .png{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   .png2{
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   .png3{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   @media screen and (max-width: 431px){
+    header{
+        width: 430px;
+        height: 50px;
+    }
+    .logo{
+        height: 25px;
+        left: 20px;
+    }
+    .count{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    nav{
+        right: 10px;
+        gap: 5px;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .first{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    footer{
+        height: 800px;
+        bottom: -100px;
+    }
+    .footer-logo{
+        flex-direction: column;
+    }
+    .footer-social{
+        justify-content: center;
+    }
+    .logos1{
+        margin-left: 150px;
+    }
+    .footer-bottom{
+        margin-left: 10px;
+    }
+    .section1{
+        padding-top: -50px;
+    }
+    .tab-content{
+      height: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./Images/jihc-logo-png-v1(white).png" alt="JIHC-Logo">
+        <nav>
+         <a class="count" href="index.html">Home</a>
+         <a class="count" href="about.html">About</a>
+         <a class="count" href="log-in.html">Log in</a>
+         <a class="count" href="./Gallery.html">Gallery</a>
+         <a class="count" href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="tabs">
+          <div class="tab">
+            <input
+              type="radio"
+              name="css-tabs"
+              id="tab-1"
+              checked
+              class="tab-switch"
+            />
+            <label for="tab-1" class="tab-label">OUR GOALS</label>
+            <div class="tab-content">
+                College is not only a place to get a degree, but also an important stage in the life of every person. During the process of studying at the university, students develop as individuals, acquire the necessary skills for their future careers, and prepare for life in a rapidly changing world. Let's consider the main goals that every student faces in college.
+                The goals of the college are not only to obtain a diploma, but also to develop the individual in all respects. The university helps students acquire the knowledge and skills necessary for a successful career, and also promotes personal growth and preparation for life in the modern world. The college opens up new opportunities for communication, broadens horizons and provides a foundation for future success.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="css-tabs" id="tab-2" class="tab-switch" />
+            <label for="tab-2" class="tab-label">About project</label>
+            <div class="tab-content">
+                College is an educational institution where students pursue higher education after completing high school. It serves as a place to acquire specialized knowledge, develop skills, and prepare for professional careers. While each college can offer a different environment, the main goal of all colleges is to provide students with the tools they need for success in their chosen careers and in life.College is more than just a place to earn a degree. It is a transformative experience that equips students with the academic knowledge, professional skills, and personal growth needed to succeed in their careers and in life. Whether pursuing a specific career, exploring new ideas, or building a professional network, college plays a crucial role in preparing students for the challenges and opportunities of the future.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" name="css-tabs" id="tab-3" class="tab-switch" />
+            <label for="tab-3" class="tab-label">Funny Story</label>
+            <div class="tab-content">
+              When I left Mr. Bates, I went down to my father: where, by the
+              assistance of him and my uncle John, and some other relations, I got
+              forty pounds, and a promise of thirty pounds a year to maintain me
+              at Leyden: there I studied physic two years and seven months,
+              knowing it would be useful in long voyages.
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="first">
+            <div class="footer-logo">
+                <div class="footer-logos">
+                  <img class="foot-logo" src="./Images/jihc-logo-png-v1(white).png" alt="photo">
+                </div>
+            </div>
+            <div class="footer-container">
+              <div class="footer-about">
+                <h3>Jambyl Innovation High Collge</h3>
+                <p> A college providing high-quality education for future professionals. We are proud of our history and the quality of our education.</p>
+              </div>
+          
+              <div class="footer-contact">
+                <h4>Contacts</h4>
+                <p>Address: st. Pushkin, 154, c. Taraz, Kazakhstan</p>
+                <p>Телефон: +7 (495) 123-45-67</p>
+                <p>Email: info@jihc.ru</p>
+              </div>
+    
+              <div class="footer-social">
+                    <h4>We are on social networks</h4>
+                    <div class="logos1">
+                        <a class="white" href="https://www.instagram.com/jihc.kz/profilecard/?igsh=MW9ldTQydWpmdjh5YQ==" target="_blank">Instagram</a>
+                        <img class="png" src="./Images/Instagram_icon.png" alt="photo">
+                    </div>
+                    <div class="logos1">
+                        <a class="white" href="https://youtube.com/@jihctv2095?si=s6jcDseCvZcx4EYY" target="_blank">YouTube</a>
+                        <img class="png2" src="./Images/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.webp" alt="photo">
+                    </div>
+                    <div class="logos1">
+                        <a class="white" href="https://facebook.com/college" target="_blank">FaceBook</a>
+                        <img class="png3" src="./Images/facebook-png-icon-follow-us-facebook-1.png" alt="photo">
+                    </div>
+              </div>
+    
+              <div class="footer-links">
+                <h4>Useful Links</h4>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-of-service">Terms of Use</a>
+                <a href="/contact">Contact us</a>
+              </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Primera College. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

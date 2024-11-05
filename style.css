@@ -1,0 +1,475 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    z-index: 5;
+    background-color: black;
+}
+.logo{
+    width: auto;
+    height: 40px;
+    position: absolute;
+    left: 80px;
+}
+.count{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(205, 205, 205);
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    position: relative;
+}
+.count:hover{
+    color: #fff;
+}
+.count:after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.count:hover::after{
+    width: 100%;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    position: absolute;
+    right: 120px;
+}
+main{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    gap: 15px;
+}
+.card{
+    width: 20%;
+    border-radius: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card:hover{
+    width: 80%;
+    transition: 1s;
+}
+.card:hover section{
+    background-color: #00000082;
+    order: 6;
+    transition: 1s;
+}
+.card .image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover .image{
+    transform: scale(1.2);
+    transition: 1s;
+}
+.card .background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+    filter: brightness(0.25);
+    opacity: 0;
+}
+.card:hover .background{
+    opacity: 1;
+}
+.card .layer{
+    width: 100%;
+    height: 50%;
+    margin-top: -250px;
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+.card .layer .info{
+    width: 260px;
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    opacity: 0;
+}
+.card:hover .layer .info{
+    opacity: 1;
+}
+.info p{
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 55px;
+    font-family:v Arial, Helvetica, sans-serif;
+}
+.info h1{
+    color: white;
+}
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: rgba(0, 0, 0, 0.313);
+    background-size: 100% 100vh;
+    object-fit: cover;
+    transition: 1s;
+}
+.section1{
+    background-image: url(./Images/College1.jpg);
+    width: 100%;
+    height: 100vh;
+}
+.section1 h1:hover{
+    color: white;
+    text-decoration: underline;
+    font-size: 102px;
+    cursor: pointer;
+    transition: 1s;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.foot-logo{
+    width: auto;
+    height: 50px;
+    margin-top: 40px;
+}
+/* CSS стили для footer */
+.first {
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* .footer-container > div {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  } */
+  
+  .footer h3, .footer h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .footer a {
+    color: rgba(128, 128, 128, 0.692);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .footer-social a {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    margin-left: -100px;
+  }
+  .tone{
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .card:hover .tone{
+    z-index: 6;
+    background-color: #00000071;
+   }
+   .logos1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+   .png{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   .png2{
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   .png3{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: black 3px solid;
+   }
+   .rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+   }
+   .section2{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #f0f0f5;
+    padding-bottom: 100px;
+   }
+   .why{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 200px;
+   }
+   .why:hover{
+    font-size: 51px;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .object p{
+    max-width: 600px;
+    color: white;
+    font-size: 18px;
+   }
+   .object p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .object h1{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .object{
+    width: 700px;
+    height: 200px;
+    background-color: black;
+   }
+   .object1{
+    border-radius: 25px 0 0 0;
+   }
+   .object2{
+    border-radius: 0 25px 0 0;
+   }
+   .object4{
+    border-radius: 0 0 25px 0;
+   }
+   .object3{
+    border-radius: 0 0 0 25px;
+   }
+   .object{
+    padding-left: 50px;
+    padding-top: 20px;
+   }
+   .object h1{
+    color: white;
+   }
+   ol{
+    color: black;
+   }
+   .prof{
+    padding-left: 100px;
+   }
+   .prof h1{
+    font-size: 50px;
+   }
+   .how p , ul li{
+    max-width: 1400px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .section4{
+    background-color: #f0f0f5;
+    margin-top: -60px;
+    padding-bottom: 30px;
+   }
+   .section3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    padding-bottom: 100px;
+   }
+   .section3 h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .section5{
+    width: 100%;
+    height: 400px;
+    background-color: rgba(130, 130, 130, 0.199);
+    margin-top: -83px;
+   }
+   .section5 h1{
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+   }
+   .w2{
+    color: blue;
+    margin-top: 80px;
+   }
+   .w4{
+    color: white;
+    margin-top: 240px;
+   }
+   .w3{
+    margin-top: 160px;
+   }
+   details{
+    font-size: 20px;
+   }
+   .section3{
+    h1:hover{
+        text-decoration: underline;
+    }
+   }
+.bg{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    padding-top: 200px;
+}
+.text1{
+    position: absolute;
+    left: 600px;
+    top: 250px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    letter-spacing: 10px;
+}
+.text1:hover{
+    font-size: 110px;
+    letter-spacing: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+@media screen and (max-width: 431px){
+    header{
+        width: 430px;
+        height: 50px;
+    }
+    .logo{
+        height: 25px;
+        left: 20px;
+    }
+    .count{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    nav{
+        right: 10px;
+        gap: 5px;
+    }
+    .rows{
+        flex-direction: column;
+    }
+    .object{
+        border-radius: 15px;
+        width: 400px;
+        height: 270px;
+        padding-left: 20px;
+    }
+    .prof{
+        padding-left: 10px;
+    }
+    .section4{
+        width: 100%;
+    }
+    .section5 h1{
+        font-size: 50px;
+        letter-spacing: 1px;
+        gap: 0;
+    }
+    .section5{
+        height: 300px;
+        width: 100%;
+        margin-top: -42px;
+    }
+    .text1{
+        left: 50px;
+        top: 400px;
+        font-size: 50px;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .first{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    footer{
+        height: 800px;
+    }
+    .footer-logo{
+        flex-direction: column;
+    }
+    .footer-social{
+        justify-content: center;
+    }
+    .logos1{
+        margin-left: 150px;
+    }
+    .footer-bottom{
+        margin-left: 10px;
+    }
+    .section1{
+        padding-top: -50px;
+    }
+}

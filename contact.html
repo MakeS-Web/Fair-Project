@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: aliceblue;
+    }
+    header{
+        width: 100%;
+        background-color: #000;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        position: fixed;
+        z-index: 5;
+    }
+    .logo{
+        width: auto;
+        height: 60px;
+        position: absolute;
+        left: 80px;
+    }
+    .count{
+        text-decoration: none;
+        font-family: sans-serif;
+        color: rgb(205, 205, 205);
+        font-size: 20px;
+        letter-spacing: 2px;
+        padding: 0 10px;
+        position: relative;
+    }
+    .count:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    .count:after{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    .count:hover::after{
+        width: 100%;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        position: absolute;
+        right: 120px;
+    }
+
+   .section1{
+    height: 100vh;
+   }
+   .bg{
+    width: 100%;
+    height: 100vh;
+   }
+   .container{
+    width: 600px;
+    height: 700px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.813);
+    border: 1px solid black;
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    justify-content: center;
+   }
+   *{
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .name{
+    width: 500px;
+    height: 30px;
+    background-color: #fff;
+    padding-left: 20px;
+    border: white 1px solid;
+   }
+   .rows{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+   }
+   .container h1{
+    padding-left: 40px;
+    padding-top: 20px;
+   }
+   a{
+    text-decoration: none;
+    color: blue;
+   }
+   a:hover{
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: underline;
+   }
+   p{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 5px;
+   }
+   input{
+    border: none;}
+    @media screen and (max-width: 431px){
+    header{
+        width: 430px;
+        height: 50px;
+    }
+    .logo{
+        height: 25px;
+        left: 20px;
+    }
+    .count{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    nav{
+        right: 10px;
+        gap: 5px;
+    }
+    .container{
+        left: 0;
+        width: 100%;
+    }
+    .name{
+        width: 350px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./Images/jihc-logo-png-v1(white).png" alt="JIHC-Logo">
+        <nav>
+         <a class="count" href="index.html">Home</a>
+         <a class="count" href="about.html">About</a>
+         <a class="count" href="log-in.html">Log in</a>
+         <a class="count" href="./Gallery.html">Gallery</a>
+         <a class="count" href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="section1">
+        <div class="container">
+            <h1>Welcome to our College</h1>
+            <div class="rows">
+                <fieldset>
+                    <legend>Name</legend>
+                    <input type="text" class="name">
+                </fieldset>
+                <fieldset>
+                    <legend>Surname</legend>
+                    <input type="text" class="name">
+                </fieldset>
+                <fieldset>
+                    <legend>Phone Number</legend>
+                    <input type="text" class="name">
+                </fieldset>
+                <fieldset>
+                    <legend>Email Address</legend>
+                    <input type="email" class="name">
+                </fieldset>
+                <fieldset>
+                    <legend>Text</legend>
+                    <input type="text" class="name">
+                </fieldset>
+            </div>
+            <p>If you want to contact with us go to<a href="./contact.html">8 123 456 7890</a>page</p>
+        </div>
+    </section>
+</body>
+</html>
